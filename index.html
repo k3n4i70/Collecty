@@ -56,19 +56,14 @@
         });
 
         // Добавете контрол за геолокация
-        var geoLocate = new mapboxgl.GeolocateControl();
-
-        map.addControl(geoLocate);
-
-        geoLocate.on('geolocate', function(e) {
-            positionOptions: {
+        map.addControl(
+            new mapboxgl.GeolocateControl({
+                positionOptions: {
                     enableHighAccuracy: true
-                }
-        map.flyTo({
-            center:[e.coords.longitude, e.coords.latitude], 
-            zoom:16 //set zoom 
-            });
-        });
+                },
+                trackUserLocation: true
+            })
+        );
 
         let userPoints = 0;
         const pointsElement = document.getElementById('points');
