@@ -61,6 +61,9 @@
         map.addControl(geoLocate);
 
         geoLocate.on('geolocate', function(e) {
+            positionOptions: {
+                    enableHighAccuracy: true
+                }
         map.flyTo({
             center:[e.coords.longitude, e.coords.latitude], 
             zoom:26 //set zoom 
