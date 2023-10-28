@@ -72,15 +72,15 @@
             pointsElement.textContent = userPoints;
         }
 
-        function cleanArea() {
-            userPoints += 10;
-            updatePointsDisplay();
+        function mapColor() {
+            alert('Зелено -> Почистено\nЖълто -> В процес\nЧервено -> Заключено');
         }
 
         function redeemPoints() {
             window.location.href = "point_menu.html";
         }
     </script>
+    <button onclick="mapColor()">Легенда</button>
     <button onclick="redeemPoints()">Обмени точките</button>
 </body>
 </html>
