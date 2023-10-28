@@ -44,20 +44,29 @@
     <h1>Collecty</h1>
     <p>Точки: <span id="points">0</span></p>
 
-    const pointsElement = document.getElementById('points');
+    <script>
+        const pointsElement = document.getElementById('points');
 
-    function updatePointsDisplay() {
+        function updatePointsDisplay() {
             pointsElement.textContent = userPoints;
         }
 
-    function cleanArea() {
-            userPoints += 10;
-            updatePointsDisplay();
-        }
+        function click() {
+            window.location.href = "point_menu.html";
 
-    function redeemPoints() {
-            window.location.href = "index.html";
+        
         }
+        
+        function redeemPoints() {
+        }
+    </script>
+    <label for="menu"></label> 
+        <select name="menu" id="menu"> 
+            <option value="green">Награда 1</option> 
+            <option value="yellow">Награда 2</option> 
+            <option value="red">Награда 3</option>  
+    </select>
     <button onclick="redeemPoints()">Към картата</button>
+    <button onclick="click()">Към картата</button>
 </body>
 </html>
